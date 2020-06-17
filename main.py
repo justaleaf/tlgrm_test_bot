@@ -1,8 +1,11 @@
 import telebot
 import os
+from telebot import apihelper
+apihelper.proxy = {'https': 'socks5://116.203.211.9:17620'}
 
 token = os.getenv("BUDGET_BOT")
-bot = telebot.TeleBot('token')
+print(token)
+bot = telebot.TeleBot(token)
 keyboard1 = telebot.types.ReplyKeyboardMarkup()
 keyboard1.row('Привет', 'Пока')
 
