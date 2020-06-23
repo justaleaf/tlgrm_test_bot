@@ -1,7 +1,5 @@
 import telebot
 import os
-from telebot import apihelper
-apihelper.proxy = {'https': 'socks5://116.203.211.9:17620'}
 
 token = os.getenv("BUDGET_BOT")
 print(token)
